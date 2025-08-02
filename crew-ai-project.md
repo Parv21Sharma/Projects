@@ -53,10 +53,3 @@ results = crew.kickoff()
 print("\nFinal Report:")
 print(results)
 
-![Output] (crew-ai-project-output.jpg)
-
-
-
-
-print(results)
-![
