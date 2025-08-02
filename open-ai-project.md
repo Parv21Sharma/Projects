@@ -81,7 +81,6 @@ my_function()
 print(f"--- Original Script ---")
 print(script_to_debug)
 print("\n" + "="*30 + "\n")
-# Execute the script
 stdout, stderr, error_traceback, success = execute_and_capture_errors(script_to_debug)
 if success:
     print("--- Script Executed Successfully ---")
@@ -102,3 +101,44 @@ else:
     print(ai_suggestion)
 
 print("execute_and_capture_errors function defined.")
+
+
+
+
+#OUTPUT
+--- Original Script ---
+
+def my_function() # Missing colon here
+    print("Hello")
+my_function()
+
+
+==============================
+
+--- Script Execution Failed ---
+
+Error Captured:
+Traceback (most recent call last):
+  File "C:\Users\Hp\AppData\Local\Temp\ipykernel_17756\1863789561.py", line 19, in execute_and_capture_errors
+    exec(script_content)
+  File "<string>", line 2
+    def my_function() # Missing colon here
+                      ^
+SyntaxError: invalid syntax
+
+
+==============================
+
+--- Requesting AI Correction ---
+
+AI Suggestion:
+Explanation: 
+The error occurred because the function definition is missing a colon at the end. In Python, a colon is required after the function signature to indicate the start of the function's body.
+
+Corrected Code:
+```python
+def my_function():
+    print("Hello")
+
+my_function()
+```
