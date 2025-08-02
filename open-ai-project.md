@@ -103,9 +103,8 @@ else:
 print("execute_and_capture_errors function defined.")
 
 
+# output
 
-
-#output
 --- Original Script ---
 
 def my_function() # Missing colon here
